@@ -67,28 +67,8 @@ body {
   width: 100%;
 }
 
-.gallery-item {
-  display: flex;
-  width: 100%;
-  overflow: hidden;
-}
-.gallery-item:hover img {
-  transform: scale(1.1);
-}
-.gallery-item img {
-  width: 100%;
-  height: 360px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: all linear 0.2s;
-}
-
 .general-padding {
   padding: 80px 0 90px 0;
-}
-
-.gallery {
-  padding-bottom: 120px;
 }
 
 .general-title {
@@ -282,9 +262,6 @@ button:focus {
   .swiper-pagination-fraction {
     bottom: -35px;
   }
-  .gallery-item img {
-    height: 300px;
-  }
   .general-btn {
     height: 42px;
     min-width: 130px;
@@ -292,9 +269,6 @@ button:focus {
   }
   .general-padding {
     padding: 45px 0 50px 0;
-  }
-  .gallery {
-    padding-bottom: 80px;
   }
   .container {
     padding-right: 20px;
@@ -859,6 +833,34 @@ header {
   }
   html:not([dir=rtl]) .question-answer {
     line-height: 1.6;
+  }
+}
+.gallery {
+  padding-bottom: 120px;
+}
+
+.gallery-item {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+.gallery-item img {
+  width: 100%;
+  height: 360px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all linear 0.2s;
+}
+
+@media only screen and (max-width: 767px) {
+  .gallery {
+    padding-bottom: 80px;
+  }
+  .gallery-item img {
+    height: 300px;
   }
 }
 .testimonials {

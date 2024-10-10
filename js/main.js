@@ -6,7 +6,7 @@ $(window).on("load", function () {
   const gallerySwiper = new Swiper(".gallery .swiper", {
     loop: true,
     draggable: true,
-    // autoplay: true,
+    autoplay: true,
     speed: 800,
     pagination: {
       el: ".gallery .swiper-pagination",
@@ -32,7 +32,7 @@ $(window).on("load", function () {
 
   const testimonialSwiper = new Swiper(" .testimonials .swiper", {
     loop: true,
-    // autoplay: true,
+    autoplay: true,
     draggable: true,
     speed: 800,
 
@@ -58,8 +58,6 @@ $(window).on("load", function () {
 });
 
 $(document).ready(function () {
-
-
   // Trip path
 
   $(".main-question").on("click", function () {
@@ -77,7 +75,7 @@ $(document).ready(function () {
     });
   }
 
-  /**************************************************************************************************** */
+  /*************************************************************************************** */
 
   // open and close sideBar
 
@@ -90,10 +88,7 @@ $(document).ready(function () {
     $("body").removeClass("overflow-hidden");
   });
 
-  /*************************************************************************************************
-
-
-  /************************************************************************************************** */
+  /********************************************************************* */
 
   // totop Button
 
@@ -109,26 +104,7 @@ $(document).ready(function () {
     $(window).scrollTop(0);
   });
 
-  /************************************************************************************************** */
-
-  // nav nested menu
-
-  // if ($(window).width() <= 992) {
-  //   $(".menu-item-has-children").click(function () {
-  //     $(this).children(".sub-menu").slideToggle(300);
-  //     $(this).children("a").toggleClass("icon-rotate");
-  //     $(".menu-item-has-children")
-  //       .not($(this))
-  //       .children(".sub-menu")
-  //       .slideUp(300);
-  //     $(".menu-item-has-children")
-  //       .not($(this))
-  //       .children("a")
-  //       .removeClass("icon-rotate");
-  //   });
-  // }
-
-  /************************************************************************************************** */
+  /*********************************************************************************** */
 
   // fixed header
 
@@ -140,17 +116,4 @@ $(document).ready(function () {
       $("header").removeClass("fixed-header");
     }
   });
-
-  /************************************************************************************************** */
-
-  //  nested menus in footer
-
-  if ($(window).width() < 768) {
-    $(".footer-title").click(function () {
-      $(this).next(".quick-drop").slideToggle(300);
-      $(this).toggleClass("arrow-rotate");
-      $(".footer-title").not($(this)).next(".quick-drop").slideUp(300);
-      $(".footer-title").not($(this)).removeClass("arrow-rotate");
-    });
-  }
 }); // End document ready
