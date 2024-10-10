@@ -1,0 +1,159 @@
+.trip-path {
+  background-color: #d7eeec;
+}
+.title-btns-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  .general-title{
+    margin-bottom: 0;
+  }
+  .download-btn {
+    min-width: 173px;
+    background-color: #dcd27a;
+    color: #559b95;
+    i{
+      margin-inline-end: 5px;
+      display: inline-block;
+    }
+    &::after {
+      background-color: #559b95;
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+  .btns-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.questions-parent{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-question {
+  position: relative;
+  background-color: #fff;
+  padding:23px 0 27px 0;
+  padding-inline: 45px;
+  cursor: pointer;
+}
+
+.main-question.active {
+  .title-wrapper .icon {
+    transform: rotate(180deg);
+  }
+  .fa-plus:before {
+    content: "\f068";
+  }
+}
+
+.title-text {
+  font-size: 24px;
+  color: #559b95;
+  line-height: 1.7;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: start;
+  transition: all ease-in-out 0.1s;
+  margin: 0;
+  cursor: pointer;
+}
+
+.title-wrapper {
+  .icon {
+    font-size: 24px;
+    color: #559b95;
+    transition: all linear 0.2s;
+  }
+}
+.question-answer {
+  font-size: 18px;
+  line-height: 36px;
+  color: #181818;
+  text-align: start;
+  margin-top: 10px;
+  display: none;
+  font-weight: 400;
+  padding-inline-end: 150px;
+  > ul {
+    padding-bottom: 15px;
+    > li {
+    font-weight: 700;
+    > ul > li {
+        font-weight: 400;
+    }
+  }
+  }  
+
+}
+
+
+@include max-992 {
+ 
+  .title-text {
+    font-size: 16px;
+  }
+
+
+  .questions-parent {
+    width: 100%;
+  }
+}
+
+@include max-768 {
+.title-btns-wrapper .download-btn i{
+  margin-inline-end: 2px;
+}
+.title-btns-wrapper .general-btn{
+  min-width: unset;
+  padding-inline: 30px;
+  white-space: nowrap;
+}
+
+  .main-question {
+    padding: 20px ;
+  }
+  .title-text {
+    line-height: 1.6;
+  }
+  .title-wrapper .icon{
+    font-size: 20px;
+  }
+
+  .title-btns-wrapper{
+    justify-content: center;
+    gap: 25px;
+  }
+  .title-btns-wrapper .btns-wrapper{
+    width: 100%;
+    justify-content: center;
+  }
+
+
+  .question-answer {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  .question-answer {
+    padding-inline-end: 35px;
+  }
+  html:not([dir="rtl"]) {
+    .question-answer {
+      line-height: 1.6;
+    }
+  }
+}
