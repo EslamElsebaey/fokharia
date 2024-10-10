@@ -14,8 +14,8 @@ $(window).on("load", function () {
     },
     breakpoints: {
       320: {
-        slidesPerView: 1,
-        spaceBetween: 10,
+        slidesPerView: 2,
+        spaceBetween: 12,
       },
       768: {
         slidesPerView: 2,
